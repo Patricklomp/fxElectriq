@@ -60,13 +60,13 @@ public class Klient {
         for (int i = 0; i < list.size(); i++) {
            Elektroonika vahend =  vahendid.get(list.get(i));
 
-           paevaTarbimine += vahend.getTarbimineTunnis()*vahend.getKasutusPaevas();
-
+           paevaTarbimine += Math.round((vahend.getTarbimineTunnis() / 10000 * vahend.getKasutusPaevas())*100) / 100.0;
+           // käibemaks + seadme keskmine energiatarbimine korrutatud tavalise kasutusajaga + teisendus MW peale
 
         }
 
 
-        return paevaTarbimine;
+        return paevaTarbimine * 1.2;
     }
 
 

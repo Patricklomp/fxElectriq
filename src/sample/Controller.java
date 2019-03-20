@@ -96,7 +96,8 @@ public class Controller {
 
 
             progressBar.setProgress(0.2);
-            checkboxList.addAll(Arrays.asList(checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,checkbox8,checkbox9,checkbox10,checkbox11,checkbox12,checkbox13,checkbox14));
+            checkboxList.addAll(Arrays.asList(checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,
+                    checkbox8,checkbox9,checkbox10,checkbox11,checkbox12,checkbox13,checkbox14));
 
         }
         else if (clicks == 1){
@@ -121,20 +122,23 @@ public class Controller {
             edasi.setText("Next");
             notVisibleCheckbox(checkboxList);
             scrollPane.setVisible(false);
-            progressBar.setProgress(0.8);
             List<Integer> valitud =  ifCheckTrueInList(checkboxList);
             klient.setPaevaKulutus(valitud);
 
 
-            keskmineTekst.setText("Electricity price right now: " + andmed.uuendaHind("https://dashboard.elering.ee/api/nps/price/ee/latest"));
-            progressBar.setProgress(1);
+            keskmineTekst.setText("Electricity price at this hour: " + andmed.uuendaHind("https://dashboard.elering.ee/api/nps/price/ee/latest") + " eur/MWh");
+            progressBar.setProgress(0.8);
         }
         else if (clicks == 4){
-            keskmineTekst.setText("Price based on your usage: " + klient.kuuElektriTarbimine(andmed.getHindMWH()));
+            keskmineTekst.setText("Monthly price based on your usage (incl. VAT 20%): " + klient.kuuElektriTarbimine(andmed.getHindMWH()) + " eur");
+            progressBar.setProgress(1);
         }
 
         System.out.println("vajutus"+clicks);
         clicks += 1;
+        if (clicks == 6){
+            System.exit(0);
+        }
     }
 
     @FXML

@@ -63,7 +63,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="checkbox0" mnemonicParsing="false" text="Coffe Maker" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                  <CheckBox fx:id="checkbox0" mnemonicParsing="false" text="Coffee Maker" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -71,7 +71,7 @@
                         <Insets top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox1" layoutX="10.0" mnemonicParsing="false" text="Microwave" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                  <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Microwave" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -79,7 +79,7 @@
                         <Insets top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox2" layoutX="10.0" mnemonicParsing="false" text="Toaster" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+                  <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Toaster" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -87,7 +87,7 @@
                         <Insets top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox3" layoutX="10.0" mnemonicParsing="false" text="Dishwasher" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                  <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Dishwasher" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -95,7 +95,7 @@
                         <Insets top="10.0" />
                      </padding>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox4" layoutX="10.0" mnemonicParsing="false" text="Washer" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                  <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Washer" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -151,7 +151,7 @@
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox11" layoutX="10.0" mnemonicParsing="false" text="Monitor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0">
+                  <CheckBox fx:id="checkbox11" mnemonicParsing="false" text="Monitor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="360.0">
                      <padding>
                         <Insets top="10.0" />
                      </padding>
@@ -159,7 +159,7 @@
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox12" layoutX="20.0" mnemonicParsing="false" text="PC" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="390.0">
+                  <CheckBox fx:id="checkbox12" mnemonicParsing="false" text="PC" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="390.0">
                      <padding>
                         <Insets top="10.0" />
                      </padding>
@@ -167,7 +167,7 @@
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkbox13" layoutX="30.0" mnemonicParsing="false" text="TV 19&quot;-36&quot;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0">
+                  <CheckBox fx:id="checkbox13" mnemonicParsing="false" text="TV 19&quot;-36&quot;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0">
                      <padding>
                         <Insets top="10.0" />
                      </padding>
