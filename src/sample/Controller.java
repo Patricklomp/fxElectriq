@@ -37,6 +37,9 @@ public class Controller {
     private Button edasi2;
 
     @FXML
+    private Button edasi3;
+
+    @FXML
     private ProgressBar progressBar;
 
     @FXML
@@ -72,6 +75,7 @@ public class Controller {
         if(clicks == 0) {
             keskmineTekst.setText("Where are you from?");
             keskmineTekst.setFont(new Font(20));
+            edasi3.setVisible(true);
             edasi2.setVisible(true);
             edasi.setText("Eesti");
 
@@ -82,6 +86,7 @@ public class Controller {
         }
         else if (clicks == 1){
             keskmineTekst.setText("Which kind of user are you?");
+            edasi3.setText("Light");
             edasi2.setText("Heavy");
             edasi.setText("Regular");
             progressBar.setProgress(0.4);
@@ -90,6 +95,7 @@ public class Controller {
         else if (clicks == 2){
             keskmineTekst.setText("Select your appliances");
             edasi2.setVisible(false);
+            edasi3.setVisible(false);
             edasi.setText("Next");
             visibleCheckbox(checkboxList);
             scrollPane.setVisible(true);

@@ -34,7 +34,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="edasi" layoutX="469.0" layoutY="515.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea;" text="Next" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+      <Button fx:id="edasi" layoutX="439.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Next" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="25.0" />
       <Label fx:id="keskmineTekst" layoutX="14.0" layoutY="382.0" prefHeight="117.0" prefWidth="403.0" text="Welcome!" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="382.0">
          <font>
             <Font name="Arial" size="38.0" />
@@ -48,14 +48,9 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label alignment="CENTER" layoutX="286.0" layoutY="40.0" text="Electriq" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Label>
-      <Button fx:id="edasi2" layoutX="300.0" layoutY="510.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea;" text="Latvia" visible="false" />
-      <ProgressBar fx:id="progressBar" layoutX="200.0" layoutY="84.0" prefWidth="200.0" progress="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="84.0" />
-      <ScrollPane fx:id="scrollPane" layoutX="76.0" layoutY="128.0" prefHeight="264.0" prefWidth="283.0" visible="false">
+      <Button fx:id="edasi3" layoutX="141.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Lietuva" visible="false" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="323.0" />
+      <Button fx:id="edasi2" layoutX="291.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Latvia" visible="false" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="173.0" />
+      <ScrollPane fx:id="scrollPane" layoutX="76.0" layoutY="128.0" prefHeight="264.0" prefWidth="283.0" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="120.0">
          <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="281.0">
                <children>
@@ -143,5 +138,15 @@
             </AnchorPane>
          </content>
       </ScrollPane>
+      <AnchorPane prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #4a69bd; -fx-border-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" text="Electriq" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Arial" size="39.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-border-color: #2c3e50;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="84.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
