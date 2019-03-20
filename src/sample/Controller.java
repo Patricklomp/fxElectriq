@@ -63,6 +63,21 @@ public class Controller {
     @FXML
     private CheckBox checkbox9;
 
+    @FXML
+    private CheckBox checkbox10;
+
+    @FXML
+    private CheckBox checkbox11;
+
+    @FXML
+    private CheckBox checkbox12;
+
+    @FXML
+    private CheckBox checkbox13;
+
+    @FXML
+    private CheckBox checkbox14;
+
     List<CheckBox> checkboxList = new ArrayList<CheckBox>();
 
 
@@ -81,7 +96,7 @@ public class Controller {
 
 
             progressBar.setProgress(0.2);
-            checkboxList.addAll(Arrays.asList(checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,checkbox8,checkbox9));
+            checkboxList.addAll(Arrays.asList(checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,checkbox8,checkbox9,checkbox10,checkbox11,checkbox12,checkbox13,checkbox14));
 
         }
         else if (clicks == 1){
@@ -111,7 +126,7 @@ public class Controller {
             klient.setPaevaKulutus(valitud);
 
 
-            keskmineTekst.setText("Electricity price right now:" + andmed.uuendaHind("https://dashboard.elering.ee/api/nps/price/ee/latest"));
+            keskmineTekst.setText("Electricity price right now: " + andmed.uuendaHind("https://dashboard.elering.ee/api/nps/price/ee/latest"));
             progressBar.setProgress(1);
         }
         else if (clicks == 4){
