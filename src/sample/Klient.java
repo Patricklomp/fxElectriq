@@ -52,7 +52,7 @@ public class Klient {
         Elektroonika televisionBg = new Elektroonika("Television 53\"-61\"",170,2.0);
 
         vahendid.addAll(Arrays.asList(kohviMasin,microwawe,toaster,dishwasher,washer,
-                dryer,iron,fan,spaceHeater,laptop,hairDryer,monitor,towerPC,televisionSm,televisionBg));
+                dryer,iron,fan,spaceHeater,hairDryer,laptop,monitor,towerPC,televisionSm,televisionBg));
 
 
 
@@ -65,8 +65,8 @@ public class Klient {
 
         }
 
-
-        return paevaTarbimine * 1.2;
+        int muudKulud = 2;
+        return paevaTarbimine * 1.2+muudKulud;
     }
 
 

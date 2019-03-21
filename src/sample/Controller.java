@@ -3,6 +3,10 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
 
@@ -16,10 +20,22 @@ public class Controller {
     Klient klient = new Klient();
 
     @FXML
+    private CheckBox checkbox11;
+
+    @FXML
+    private CheckBox checkbox10;
+
+    @FXML
+    private CategoryAxis xAxis = new CategoryAxis();
+
+    @FXML
     private ScrollPane scrollPane;
 
     @FXML
     private CheckBox checkbox0;
+
+    @FXML
+    private CheckBox checkbox14;
 
     @FXML
     private Button edasi;
@@ -28,13 +44,27 @@ public class Controller {
     private CheckBox checkbox1;
 
     @FXML
+    private CheckBox checkbox13;
+
+    @FXML
     private CheckBox checkbox2;
+
+    @FXML
+    private CheckBox checkbox12;
 
     @FXML
     private Label keskmineTekst;
 
     @FXML
+    private NumberAxis yAxis = new NumberAxis();
+
+    @FXML
+    private BarChart<String, Number> priceChart = new BarChart<String, Number>(xAxis,yAxis);
+
+    @FXML
     private Button edasi2;
+
+
 
     @FXML
     private Button edasi3;
@@ -63,21 +93,6 @@ public class Controller {
     @FXML
     private CheckBox checkbox9;
 
-    @FXML
-    private CheckBox checkbox10;
-
-    @FXML
-    private CheckBox checkbox11;
-
-    @FXML
-    private CheckBox checkbox12;
-
-    @FXML
-    private CheckBox checkbox13;
-
-    @FXML
-    private CheckBox checkbox14;
-
     List<CheckBox> checkboxList = new ArrayList<CheckBox>();
 
 
@@ -96,7 +111,7 @@ public class Controller {
 
 
             progressBar.setProgress(0.2);
-            checkboxList.addAll(Arrays.asList(checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,
+            checkboxList.addAll(Arrays.asList(checkbox0,checkbox1,checkbox2,checkbox3,checkbox4,checkbox5,checkbox6,checkbox7,
                     checkbox8,checkbox9,checkbox10,checkbox11,checkbox12,checkbox13,checkbox14));
 
         }
@@ -130,11 +145,24 @@ public class Controller {
             progressBar.setProgress(0.8);
         }
         else if (clicks == 4){
-            keskmineTekst.setText("Monthly price based on your usage (incl. VAT 20%): " + klient.kuuElektriTarbimine(andmed.getHindMWH()) + " eur");
+            priceChart.setVisible(true);
+            double kliendiArve = Math.round(klient.kuuElektriTarbimine(andmed.getHindMWH()));
+
+
+            XYChart.Series series1 = new XYChart.Series();
+            series1.setName("Avg Est");
+            series1.getData().add(new XYChart.Data("", 35));
+
+            XYChart.Series series2 = new XYChart.Series();
+            series2.setName("User");
+            series2.getData().add(new XYChart.Data("", kliendiArve));
+
+            priceChart.getData().addAll(series1,series2);
+            keskmineTekst.setText("Monthly price based on your usage (incl. VAT 20%): " + kliendiArve + " eur");
             progressBar.setProgress(1);
         }
 
-        System.out.println("vajutus"+clicks);
+
         clicks += 1;
         if (clicks == 6){
             System.exit(0);
@@ -164,11 +192,12 @@ public class Controller {
         List<Integer> valitud =new  ArrayList<Integer>();
         for (int i = 0; i < list.size(); i++) {
             if(list.get(i).isSelected()){
-                System.out.println("No vabsjee");
+
                 valitud.add(i);
             }
 
         }
+        System.out.println(valitud.toString());
         return valitud;
     }
 
