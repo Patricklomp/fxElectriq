@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 public class Controller {
     int clicks = 0;
@@ -96,13 +97,39 @@ public class Controller {
     @FXML
     private CheckBox checkbox9;
 
-    List<CheckBox> checkboxList = new ArrayList<CheckBox>();
-
-
+    @FXML
+    private TextField added_Name;
 
 
     @FXML
+    private TextField added_usage;
+
+    @FXML
+    private TextField added_kw;
+
+    List<CheckBox> checkboxList = new ArrayList<CheckBox>();
+
+
+    @FXML
+    void addUserStuf(ActionEvent event) {
+        //Lisab uue elektriseadme kliendi seadmetesse
+        System.out.println(added_Name.getText()+" "+added_usage.getText()+" "+added_kw.getText());
+        String nimi = added_Name.getText();
+        Double usage = Double.parseDouble(added_usage.getText());
+        Double kw = Double.parseDouble(added_kw.getText());
+        Elektroonika lisa = new Elektroonika(nimi,usage,kw);
+        klient.lisaSeade(lisa);
+        CheckBox uus = new CheckBox(added_Name.getText()+" "+added_usage.getText()+" "+added_kw.getText());
+        uus.setVisible(true);
+        uus.setMinSize(200,200);
+        checkboxList.add(uus);
+
+        visibleCheckbox(checkboxList);
+        }
+
+    @FXML
     protected void initialize(){
+
         electriq.setFont(new Font("Arbutus Slab",40));
         System.out.println("siin");
     }
