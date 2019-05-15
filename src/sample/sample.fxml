@@ -217,10 +217,18 @@
                </tickLabelFont></NumberAxis>
         </yAxis>
       </BarChart>
-      <TextField fx:id="added_Name" layoutX="300.0" layoutY="226.0" prefHeight="25.0" prefWidth="124.0" />
-      <TextField fx:id="added_usage" layoutX="433.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
-      <TextField fx:id="added_kw" layoutX="508.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
-      <Text layoutX="337.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or add your own" wrappingWidth="192.61328125" />
-      <Button layoutX="512.0" layoutY="271.0" mnemonicParsing="false" onAction="#addUserStuf" text="Add" />
+      <TextField fx:id="added_Name" layoutX="300.0" layoutY="226.0" prefHeight="25.0" prefWidth="124.0" visible="false" />
+      <TextField fx:id="added_usage" layoutX="433.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+      <TextField fx:id="added_kw" layoutX="508.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+      <Text fx:id="user_add_text" fill="WHITE" layoutX="283.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or add yourself" visible="false" wrappingWidth="246.61328125" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font></Text>
+      <Button id="addIt" fx:id="addStuf" layoutX="512.0" layoutY="271.0" mnemonicParsing="false" onAction="#addUserStuf" text="Add" visible="false" />
+      <Label fx:id="added_result" layoutX="249.0" layoutY="326.0" prefHeight="21.0" prefWidth="311.0" text="Label" textFill="#c6c6c6" visible="false">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

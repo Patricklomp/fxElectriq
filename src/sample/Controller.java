@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -9,6 +11,8 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -43,6 +47,9 @@ public class Controller {
 
     @FXML
     private Button edasi;
+
+    @FXML
+    private Label added_result;
 
     @FXML
     private CheckBox checkbox1;
@@ -107,6 +114,15 @@ public class Controller {
     @FXML
     private TextField added_kw;
 
+
+    @FXML
+    private Button addStuf;
+
+
+
+    @FXML
+    private Text user_add_text;
+
     List<CheckBox> checkboxList = new ArrayList<CheckBox>();
 
 
@@ -124,7 +140,17 @@ public class Controller {
         uus.setMinSize(200,200);
         checkboxList.add(uus);
 
+        added_result.setText("+Added: "+ added_Name.getText()+" "+added_usage.getText()+" "+added_kw.getText());
+        added_result.setVisible(true);
+
         visibleCheckbox(checkboxList);
+
+        FadeTransition ft = new FadeTransition(
+                Duration.seconds(2), added_result
+        );
+        ft.setFromValue(1.0);
+        ft.setToValue(0.0);
+        ft.play();
         }
 
     @FXML
@@ -139,7 +165,7 @@ public class Controller {
     @FXML
     void mineEdasi(ActionEvent event) throws Exception{
         AndmeteSaamine andmed = new AndmeteSaamine("https://dashboard.elering.ee/api/nps/price/ee/latest");
-
+        electriq.setFont(new Font("Arbutus Slab",40));
 
         if(clicks == 0) {
             keskmineTekst.setText("Where are you from?");
@@ -170,6 +196,15 @@ public class Controller {
             visibleCheckbox(checkboxList);
             scrollPane.setVisible(true);
             progressBar.setProgress(0.6);
+
+            //User can add
+            added_kw.setVisible(true);
+            added_usage.setVisible(true);
+            added_Name.setVisible(true);
+            addStuf.setVisible(true);
+            user_add_text.setVisible(true);
+
+
         }
         else if (clicks == 3){
             keskmineTekst.setText("Loading");
@@ -182,6 +217,13 @@ public class Controller {
 
             keskmineTekst.setText("Electricity price at this hour: " + andmed.uuendaHind("https://dashboard.elering.ee/api/nps/price/ee/latest") + " eur/MWh");
             progressBar.setProgress(0.8);
+
+            //User can add
+            added_kw.setVisible(false);
+            added_usage.setVisible(false);
+            added_Name.setVisible(false);
+            addStuf.setVisible(false);
+            user_add_text.setVisible(false);
         }
         else if (clicks == 4){
             priceChart.setVisible(true);
