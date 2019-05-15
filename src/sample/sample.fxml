@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.chart.*?>
@@ -194,12 +195,10 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <AnchorPane prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #4a69bd; -fx-border-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #61456a; -fx-border-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" text="Electriq" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-               <font>
-                  <Font name="Arial" size="39.0" />
-               </font>
+            <Label fx:id="electriq" alignment="CENTER" text="Electriq" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+               
             </Label>
             <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-border-color: #2c3e50;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="84.0" />
          </children>
@@ -218,5 +217,9 @@
                </tickLabelFont></NumberAxis>
         </yAxis>
       </BarChart>
+      <TextField layoutX="300.0" layoutY="226.0" prefHeight="25.0" prefWidth="124.0" />
+      <TextField layoutX="433.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField layoutX="508.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
+      <Text layoutX="337.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or add your own" wrappingWidth="192.61328125" />
    </children>
 </AnchorPane>

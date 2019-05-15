@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -14,7 +22,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="600.0" style="-fx-background-color: #3c6382;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="600.0" style="-fx-background-color: #3c6382;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar layoutX="190.0" layoutY="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -187,15 +195,31 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <AnchorPane prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #4a69bd; -fx-border-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="111.0" prefWidth="600.0" style="-fx-background-color: #61456a; -fx-border-color: #2c3e50;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" text="Electriq" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-               <font>
-                  <Font name="Arial" size="39.0" />
-               </font>
+            <Label fx:id="electriq" alignment="CENTER" text="Electriq" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+               
             </Label>
             <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" style="-fx-border-color: #2c3e50;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="84.0" />
          </children>
       </AnchorPane>
+      <BarChart fx:id="priceChart" layoutX="186.0" layoutY="127.0" legendSide="RIGHT" prefHeight="251.0" prefWidth="492.0" title="Compare" titleSide="LEFT" visible="false" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="125.0">
+        <xAxis>
+          <CategoryAxis label="User" side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis">
+               <tickLabelFont>
+                  <Font size="12.0" />
+               </tickLabelFont></CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" label="Price" side="LEFT" tickLabelFill="WHITE">
+               <tickLabelFont>
+                  <Font size="12.0" />
+               </tickLabelFont></NumberAxis>
+        </yAxis>
+      </BarChart>
+      <TextField layoutX="300.0" layoutY="226.0" prefHeight="25.0" prefWidth="124.0" />
+      <TextField layoutX="433.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
+      <TextField layoutX="508.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" />
+      <Text layoutX="337.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or add your own" wrappingWidth="192.61328125" />
    </children>
 </AnchorPane>

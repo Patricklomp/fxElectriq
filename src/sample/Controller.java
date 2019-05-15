@@ -10,6 +10,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,6 +20,8 @@ public class Controller {
     int clicks = 0;
     Klient klient = new Klient();
 
+    @FXML
+    private Label electriq;
     @FXML
     private CheckBox checkbox11;
 
@@ -94,6 +97,15 @@ public class Controller {
     private CheckBox checkbox9;
 
     List<CheckBox> checkboxList = new ArrayList<CheckBox>();
+
+
+
+
+    @FXML
+    protected void initialize(){
+        electriq.setFont(new Font("Arbutus Slab",40));
+        System.out.println("siin");
+    }
 
 
 
