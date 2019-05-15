@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -17,12 +12,12 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="600.0" style="-fx-background-color: #3c6382;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="601.0" style="-fx-background-color: #3c6382;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <MenuBar layoutX="190.0" layoutY="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -43,23 +38,15 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="edasi" layoutX="439.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Next" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="25.0" />
-      <Label fx:id="keskmineTekst" layoutX="14.0" layoutY="382.0" prefHeight="117.0" prefWidth="403.0" text="Welcome!" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="382.0">
+      <Button fx:id="edasi" layoutX="440.0" layoutY="508.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Next" AnchorPane.bottomAnchor="26.66666666666663" AnchorPane.rightAnchor="25.0" />
+      <Label fx:id="keskmineTekst" layoutX="14.0" layoutY="382.0" prefHeight="117.0" prefWidth="403.0" text="Welcome!" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="382.0">
          <font>
             <Font name="Arial" size="38.0" />
          </font>
-         <textFill>
-            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-               <stops>
-                  <Stop color="#f1f2f6" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </RadialGradient>
-         </textFill>
       </Label>
       <Button fx:id="edasi3" layoutX="141.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Lietuva" visible="false" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="323.0" />
       <Button fx:id="edasi2" layoutX="291.0" layoutY="509.0" mnemonicParsing="false" onAction="#mineEdasi" prefHeight="57.0" prefWidth="136.0" style="-fx-background-color: #dfe4ea; -fx-border-color: #2c3e50;" text="Latvia" visible="false" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="173.0" />
-      <ScrollPane fx:id="scrollPane" layoutX="76.0" layoutY="128.0" prefHeight="264.0" prefWidth="283.0" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="120.0">
+      <ScrollPane fx:id="scrollPane" layoutX="76.0" layoutY="128.0" prefHeight="264.0" prefWidth="246.0" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="120.0">
          <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="501.0" prefWidth="281.0">
                <children>
@@ -217,15 +204,15 @@
                </tickLabelFont></NumberAxis>
         </yAxis>
       </BarChart>
-      <TextField fx:id="added_Name" layoutX="300.0" layoutY="226.0" prefHeight="25.0" prefWidth="124.0" visible="false" />
-      <TextField fx:id="added_usage" layoutX="433.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
-      <TextField fx:id="added_kw" layoutX="508.0" layoutY="226.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
-      <Text fx:id="user_add_text" fill="WHITE" layoutX="283.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or add yourself" visible="false" wrappingWidth="246.61328125" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
+      <TextField fx:id="added_Name" layoutX="160.0" layoutY="292.0" prefHeight="25.0" prefWidth="136.0" promptText="Device" visible="false" AnchorPane.rightAnchor="305.0" />
+      <TextField fx:id="added_usage" layoutX="313.0" layoutY="292.0" prefHeight="25.0" prefWidth="60.0" promptText="Time (h)" visible="false" AnchorPane.rightAnchor="228.0" />
+      <TextField fx:id="added_kw" layoutX="385.0" layoutY="292.0" prefHeight="25.0" prefWidth="86.0" promptText="Usage (kWh)" visible="false" AnchorPane.rightAnchor="130.0" />
+      <Text fx:id="user_add_text" fill="WHITE" layoutX="260.0" layoutY="263.171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Add your own devices" textOrigin="CENTER" visible="false" wrappingWidth="199.33342170715326" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="252.0">
          <font>
-            <Font name="Arial" size="36.0" />
+            <Font name="Arial" size="20.0" />
          </font></Text>
-      <Button id="addIt" fx:id="addStuf" layoutX="512.0" layoutY="271.0" mnemonicParsing="false" onAction="#addUserStuf" text="Add" visible="false" />
-      <Label fx:id="added_result" layoutX="249.0" layoutY="326.0" prefHeight="21.0" prefWidth="311.0" text="Label" textFill="#c6c6c6" visible="false">
+      <Button id="addIt" fx:id="addStuf" layoutX="495.0" layoutY="292.0" mnemonicParsing="false" onAction="#addUserStuf" prefHeight="25.0" prefWidth="60.0" text="Add" visible="false" AnchorPane.rightAnchor="46.0" />
+      <Label fx:id="added_result" layoutX="228.0" layoutY="326.0" prefHeight="21.0" prefWidth="311.0" text="Label" textFill="#c6c6c6" visible="false">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
