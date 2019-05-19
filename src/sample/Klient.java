@@ -1,17 +1,13 @@
 package sample;
 
-import javafx.scene.control.CheckBox;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Klient {
-    private double tarbimisKonf = 1;
     double kuuTarbimine;
     double paevaTarbimine = 0;
-    ArrayList<Elektroonika> vahendid = new ArrayList<Elektroonika>();
-
+    ArrayList<Elektroonika> vahendid = new ArrayList<>();
 
     public Klient() {
 
@@ -32,48 +28,33 @@ public class Klient {
         Elektroonika televisionBg = new Elektroonika("Television 53\"-61\"",170,2.0);
         this.vahendid.addAll(Arrays.asList(kohviMasin,microwawe,toaster,dishwasher,washer,
                 dryer,iron,fan,spaceHeater,hairDryer,laptop,monitor,towerPC,televisionSm,televisionBg));
-
     }
 
     public double kuuElektriTarbimine(double hind) {
 
         System.out.println(hind);
 
-
-
         //Kuu Kohta
         double kuuTarbimine = paevaTarbimine*30;
 
         this.kuuTarbimine = kuuTarbimine;
         return kuuTarbimine;
-
-
     }
-
 
 
     public double  setPaevaKulutus(List<Integer> list){
 
         ///https://www.saveonenergy.com/energy-consumption/
 
-
-
-
-
-
-
-
-
         for (int i = 0; i < list.size(); i++) {
            Elektroonika vahend =  vahendid.get(list.get(i));
 
            paevaTarbimine += Math.round((vahend.getTarbimineTunnis() / 10000 * vahend.getKasutusPaevas())*100) / 100.0;
            // käibemaks + seadme keskmine energiatarbimine korrutatud tavalise kasutusajaga + teisendus MW peale
-
         }
 
         int muudKulud = 2;
-        return paevaTarbimine * 1.2+muudKulud;
+        return paevaTarbimine * 1.2 + muudKulud;
     }
 
     public void lisaSeade(Elektroonika e){
@@ -82,6 +63,4 @@ public class Klient {
 
         paevaTarbimine+= Math.round((e.getTarbimineTunnis() / 10000 * e.getKasutusPaevas())*100) / 100.0;
     }
-
-
 }

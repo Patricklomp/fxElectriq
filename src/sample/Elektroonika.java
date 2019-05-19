@@ -2,14 +2,11 @@ package sample;
 
 public class Elektroonika {
 
-
     private String nimi;
     private double tarbimineTunnis;
     private double kasutusPaevas;
     //wattid
     private double tarbimineKuus;
-
-
 
 
     public Elektroonika(String nimi, double tarbimineTunnis, double kasutusPaevas) {
@@ -46,7 +43,4 @@ public class Elektroonika {
     public String toString() {
         return nimi+"("+tarbimineTunnis+"kWH)";
     }
-
-
-
 }

@@ -43,13 +43,8 @@ public class AndmeteSaamine {
 
         JSONArray jsonArray = (JSONArray) json.get("data");
 
-
         this.hindMWH = (double) ((JSONObject) jsonArray.get(0)).get("price");
 
-
         return hindMWH;
-
     }
-
-
 }

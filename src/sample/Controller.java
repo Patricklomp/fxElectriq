@@ -1,10 +1,8 @@
 package sample;
 
 import javafx.animation.FadeTransition;
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
@@ -14,12 +12,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 public class Controller {
     int clicks = 0;
@@ -75,8 +70,6 @@ public class Controller {
     @FXML
     private Button edasi2;
 
-
-
     @FXML
     private Button edasi3;
 
@@ -107,23 +100,19 @@ public class Controller {
     @FXML
     private TextField added_Name;
 
-
     @FXML
     private TextField added_usage;
 
     @FXML
     private TextField added_kw;
 
-
     @FXML
     private Button addStuf;
-
-
 
     @FXML
     private Text user_add_text;
 
-    List<CheckBox> checkboxList = new ArrayList<CheckBox>();
+    List<CheckBox> checkboxList = new ArrayList<>();
 
 
     @FXML
@@ -159,7 +148,6 @@ public class Controller {
         electriq.setFont(new Font("Arbutus Slab",40));
         System.out.println("siin");
     }
-
 
 
     @FXML
@@ -265,12 +253,11 @@ public class Controller {
 
         for (int i = 0; i < visible.size(); i++) {
             visible.get(i).setVisible(false);
-
         }
     }
 
     List<Integer> ifCheckTrueInList(List<CheckBox> list){
-        List<Integer> valitud =new  ArrayList<Integer>();
+        List<Integer> valitud = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             if(list.get(i).isSelected()){
 
@@ -281,5 +268,4 @@ public class Controller {
         System.out.println(valitud.toString());
         return valitud;
     }
-
 }
