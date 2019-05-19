@@ -22,6 +22,9 @@ h1, h2, h3
 	font-weight: 600;
 	color: #454445;
 }
+h1{
+	font-family: 'Playfair Display', serif;
+}
 
 p, ol, ul
 {
@@ -368,8 +371,8 @@ ul.contact li a.icon-rss:before
 	
 #header-wrapper
 {
-	background: #2b2b2b url(images/banner.jpg) no-repeat center;
-	background-size: auto 100%;
+	background: #2b2b2b url(../images/elec.jpeg) no-repeat center;
+	background-size: cover 100%;
 }
 
 #header
