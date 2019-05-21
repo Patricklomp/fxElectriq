@@ -967,3 +967,25 @@ ul.contact li a.icon-rss:before
 	height: 4vh;
 	width: 4vh;
 }
+
+.seenon{
+	background-color: #8395a7;
+	height: 18vh;
+}
+
+.seenpic{
+	object-fit: contain;
+	width: 20vh;
+	height: 10vh;
+}
+
+.pic img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.pic img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
